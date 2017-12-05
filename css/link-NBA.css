@@ -1,0 +1,30 @@
+.guodu{
+	width:230px;
+	height:100px;
+	border:none;
+	transition:width 2s;
+	-webkit-transition:width 2s;
+}
+.guodu:hover{
+	width:250px;
+}
+.guodu1{
+	width:234px;
+	height:100px;
+	border:none;
+	transition:width 2s;
+	-webkit-transition:width 2s;
+	}
+.guodu1:hover{
+	width:380px;
+}
+
+a .btn{
+	font-size:14px;
+}
+a .btn:hover{
+	background-color:red;
+}
+.border li{
+	margin-right:21px;
+}

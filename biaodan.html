@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				font-size: 14px;
+				font-family: "微软雅黑";
+			}
+			/*清除浏览器默认样式*/
+			
+			body,
+			p,
+			ul,
+			li {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			.bg {
+				width: 500px;
+				height: 180px;
+				margin: 50px auto;
+				border: 3px double #ccc;
+				padding: 30px;
+				background: url(images/bg.png) no-repeat center center;
+			}
+			
+			ul {
+				float: left;
+			}
+			
+			li {
+				text-align: right;
+				height: 50px;
+			}
+			
+			.list {
+				float: left;
+			}
+			
+			p {
+				width: 360px;
+				height: 50px;
+			}
+			
+			span {
+				/*display: none;*/
+				float: right;
+				padding: 0 0 0 10px;
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form action="#" method="post" class="bg">
+
+			<ul>
+
+				<li>用户名：</li>
+
+				<li id="shuru">输入密码：</li>
+
+				<li id="queren">确认密码：</li>
+			</ul>
+
+			<div class="list">
+
+				<p><input type="text" /></p>
+
+				<p><input type="password" id="pwd" /><span id="one"></span></p>
+
+				<p><input type="password" id="pwd2" /><span id="two"></span></p>
+				<input type="button" value="提交" />
+			</div>
+		</form>
+		<script type="text/javascript">
+			var span = ["one", "two"].map(function(id) {
+				return document.getElementById(id);
+			})
+			var input = ["pwd", "pwd2"].map(function(id) {
+				return document.getElementById(id);
+			})
+			input[0].addEventListener("blur",function(){
+				span[0].innerHTML = input[0].value ==""?"空":"";
+			})
+			input[1].addEventListener("blur",function(){
+				span[1].innerHTML = input[0].value != input[1].value ?"不一致":"";
+			})
+		</script>
+	</body>
+
+</html>

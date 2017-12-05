@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				background: url(images/flash_sale.png) no-repeat;
+				width: 702px;
+				height: 378px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.img-box #hour {
+				left: 50.6%;
+				top: 68.35%
+			}
+			
+			.img-box #munite {
+				left: 55.2%;
+				top: 68.35%;
+			}
+			
+			.img-box #second {
+				left: 59.6%;
+				top: 68.35%;
+			}
+			
+			#bot-box {
+				position: absolute;
+				z-index: 1;
+				top: 250px;
+				display: none;
+				width: 702px;
+				height: 51px;
+				line-height: 40px;
+				text-align: center;
+				color: #666;
+				font-size: 28px;
+			}
+			
+			span {
+				position: relative;
+				text-align: center;
+				line-height: 26px;
+				margin: 4px 0 0 3px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="img-box">
+			<span id="hour"></span><span id="munite"></span>
+			<span id="second"></span>
+		    <div id="bot-box"></div>
+		</div>
+		<script type="text/javascript">
+			setInterval(function() {
+				var endtime = new Date("2017/12/28,00:00:00");
+				var nowtime = new Date();
+				var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+				/*var hour = parseInt(lefttime/3600);
+				var munite = parseInt((lefttime/60)%60);
+				var second = parseInt(lefttime%60);
+				if(hour<10) hour = "0"+hour;
+				if(munite<10) {munite = "0"+munite;if(munite<0) munite = "00";}
+				if(second<10) {second = "0" + second;if(second<0) second = "00"}
+				document.getElementById("hour").innerHTML=hour;
+				document.getElementById("munite").innerHTML=munite;
+				document.getElementById("second").innerHTML=second;
+				*/
+				var list = ["hour", "munite", "second"].map(function(id) {
+					return document.getElementById(id);
+				});
+				var list2 = [parseInt(lefttime / 3600), parseInt((lefttime / 60) % 60), parseInt(lefttime % 60)]
+				for (var i = 0; i < list.length; i++) {
+					list[i].innerHTML = list2[i];
+				}
+			}, 1000)
+		</script>
+	</body>
+
+</html>

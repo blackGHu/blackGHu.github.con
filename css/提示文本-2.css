@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border:none;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background:#F00;
+    color:#fff;
+    text-align: center;
+    border-radius: 30px;
+	box-shadow:5px 5px 5px #00FFFF;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    
+    /* 淡入 - 1秒内从 0% 到 100% 显示: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.x1{
+	display:inline-block;
+	margin:auto;
+	padding:10px;
+	font-size:14px;
+	list-style:none;
+	color:black;
+	background-color:black;
+	border-radius:0 50px 0 50px;
+	border-right:1 solid #FFF;
+}
+.x1:hover li:hover a{ background-color:#ccc;}
+.x1 .x11{
+	border-radius:20px 0 20px 0;
+}
