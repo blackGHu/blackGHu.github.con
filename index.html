@@ -1,190 +1,195 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/jquery-1.8.1.js"></script>
+<script src="js/newblog-zhedie.js"></script>
+<link rel="stylesheet" type="text/css" href="css/newblog.css" />
+<title>blackGHu's   blog</title>
+<style>
+body{
+	padding:0;
+	margin:0 auto;
+	line-height:1.5;
+	text-indent:2em;
+}
+.top{
+	
+	background:url(img/b-1.jpg) no-repeat;
+	background-size:cover;
+	height:200px;
+	margin:0 auto;
+}
+.img{
+	border-radius:100px;
+	
+}
 
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/blog-2.css"/>
-        <link rel="stylesheet" type="text/css" href="css/提示文本-2.css">
-        <link rel="stylesheet" type="text/css" href="css/link-NBA.css">
-        <script language="javascript" src="js/blog-2.js"></script>
-		<style type="text/css">
-			* {
-				padding: 0;
-				margin: 0;
-			}
-			
-			.top_background-left {
-				width: auto;
-				height: 150px;
-				border-radius: 0 0 200px 200px;
-				background: url(img/img-4.jpg) round;
-			}
-			
-			.top_background-center {
-				border-radius: 300px;
-				background: #FC0;
-			}
-			.imgbox {
-                width: 480px;
-                height: 320px;
-                position: relative;
+#nav-toggle span { position: absolute; right:1%; top: 0%; }
 
-            }
-            
-            .imgs {
-                opacity: 0;
-                position: absolute;
-                max-height: 320px;
-                max-width: 480px;
-            }
-		</style>
-	</head>
+#nav-toggle span, 
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 30px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px; 
+} 
 
-	<body background="img/img-2.jpg"	>
-		<!--top导航栏-->
-		<div class="top_background-left">
-			<div>
-				<a href="https://developer.mozilla.org/zh-CN/" target="_blank"><img src="img/mdn.png" width="50" height="46" class="top_background-center" style="float: left;" /></a>
-					
-					<ul style="float: right;" class="breadcrumb">
-                    <img src="img/img-9.jpg" width="70" height="46" class="top_background-center" style="float: left;" />
-						<li><a class="active" href="#home">主页</a></li>
-						
-						<div class="dropdown">
-							<a href="#" class="dropbtn">菜单</a>
-							<div class="dropdown-content" style="text-align: left;	background:orange;">
-								<a href="#">链接 1</a>
-								<a href="#">链接 2</a>
-								<a href="#">链接 3</a>
-                               
-							</div>
-                      
-						</div>
-                         
-			  </ul>
-                     
-					<ul class="breadcrumb">
-						
-						<li><a class="active" href="#home">主页</a></li>
-						
-						<div class="dropdown">
-							<a href="#" class="dropbtn">作品</a>
-							<div class="dropdown-content" style="background: orange;">
-								<a href="http://xiaorong61.github.io" target="_blank"><marquee direction="right" behavior="alternate" scrollamount="1">在线聊天</marquee></a>
-								<a href="#"><marquee direction="right" behavior="alternate" scrollamount="1">博客</marquee></a>
-								
-							</div>
-						</div>
-					</ul>
-					
-		  </div>
+.dropdown {
+    position:relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+	text-align:center;
+    display: none;
+    position: relative;left:10px; top:20px;
+    background-color:rgba(255,255,204,1);
+	border-radius:23px;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content .one {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content .one:hover {background-color:#FCC; border-radius:200px;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.content{
+	margin-top:10px;
+	padding-top:0px;
+	border-top:5px solid #F00;
+}
+
+.content_a{
+	width:1600;
+	padding:50px;
+	margin:0 auto;
+	heigth:200px;
+}
+
+
+</style>
+</head>
+
+<body>
+	<!--导入菜单栏   并且可以    锚点-->
+
+	<div class="top">
+    
+    <br />
+    <div style="padding-right:20px">
+         <div class="dropdown" style="float:right;">
+    	 <a id="nav-toggle" href="#" style="float:right;"><span></span></a>
+             <div class="dropdown-content">
+                 <a href="#one" class="one" >DOM</a>
+                 <a href="#two" class="one">xsc</a>
+                 <a href="#three" class="one">xsc</a>
+                 <a href="#four" class="one">心得体会	</a>
+    
+              </div>
 		</div>
-		<!--导航栏结束-->
-		<!--各种互联网+例子的链接-->
-		<div style="padding:50px;">
-			<link rel="stylesheet" type="text/css" href="css/link-NBA.css"/>
-			<ul style="list-style: none;" class="border">
-				<li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/HTML5" target="_blank"><img src="img/html5.png" />⊙HTML5</a></li>
-				<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS3" target="_blank"><img src="img/css3.png" />▲CSS3</a></li>
-                <li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/JavaScript" target="_blank"><img src="img/js.png" />⊙JS</a></li>
-                <li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/jQuery" target="_blank"><img src="img/jQuery.png" />▲jQuery</a></li>
-                <li><a href="https://nodejs.org/en/docs/" target="_blank"><img src="img/nodejs.png" />⊙Nodejs</a></li>
-                <li><a href="https://reactjs.org/" target="_blank"><img src="img/react.png"  height="32"/>▲React</a></li>
-                <li><a href="https://www.highcharts.com/" target="_blank"><img src="img/highcharts.png" />⊙Highcharts</a></li>
-                
-			</ul>
-		</div>
-		<!--a链接结束-->
-		<div id="">
-       		<!--   控制页面右侧   -->
-            <div style="float:right; padding-right:40px; padding-left:50px; margin:20px" >
-        		<div class="imgbox" id="imgbox" onClick="change()">
-        			<img src="img/img-13.jpg"  width="480px;" height="320px;" class="imgs" style="opacity: 1;" alt="" />
-                    <img src="img/img-14.jpg"  width="480px;" height="320px;" class="imgs" alt=""/>
-                    <img src="img/img-17.jpg"  width="480px;" height="320px;" class="imgs" alt=""/>
-                    <img src="img/img-15.jpg"  width="480px;" height="320px;" class="imgs" alt=""/>
-                    <img src="img/1.jpg"  width="480px;" height="320px;" class="imgs" alt=""/>
-        		</div>
-               
-                <div style="padding-top:60px; width:500px; ">
-                	<img src="img/img-7.jpg"  align="left" width="250px" height="185">
-                    <div class="tooltip" style="text-align:center">
-				<h3 style="color: orangered;" >HTML--DOM</h3>
-                <span class="tooltiptext">What Is  DOM?</span>
-               <div class="guodu" style="color: wheat; line-height:30px">
-				HTML-超文本标记语言
-                <br />可在其中建立自己的WEB站点<br />HTML运行在浏览器上<br />并且由浏览器解析<br />
-                如何用HTML来创建站点呢？
-                <br /><br />
-                </div>
-                </div>
-                    
-					<hr  />
-                	<a href="http://www.runoob.com/html/html-tutorial.html" target="_blank"><button value="阅读全文" style="background-color:orange; float: right; border: none;height:30px; width:60px; border-radius:60px;"><marquee direction="right" behavior="alternate" scrollamount="1">阅读全文</marquee></button></a>
-                </div>
-                <div style="padding-top:170px; width:500px;">
-                <img src="img/img-7.jpg" width="250px" align="left" height="185" >
-                <div class="tooltip" style=" text-align:center">
-				<h3 style="color: orangered;" >HTML</h3>
-                <span class="tooltiptext">What IS HTML?</span>
-                <div class="guodu" style="color: wheat; line-height:30px">
-				HTML-超文本标记语言
-                <br />可在其中建立自己的WEB站点<br />HTML运行在浏览器上<br />并且由浏览器解析<br />
-                如何用HTML来创建站点呢？
-                <br /><br />
-                </div>
-                </div>
-                    
-					<hr  />
-                	<a href="#"><button value="阅读全文" style="background-color:orange; float: right; border: none;height:30px; width:60px; border-radius:60px;"><marquee direction="right" behavior="alternate" scrollamount="1">阅读全文</marquee></button></a>
-                </div>
-        	</div>
-            <!-- 右侧结束  -->
-            <!-- 开启左侧  -->
-			<div id="" style="padding:20px 50px;">
-				<img src="img/img-6.jpg" width="480px" />
-			</div>
-			<div id="" style="padding-top: 40px; padding-left:20px;‘ width: 500px;">
-				<img src="img/light.gif" id="light" style="float:left" onmouseover="nolight()" onmouseout="light()" />
-                <div class="tooltip" style=" text-align:center">
-				<h3 style="color: orangered;" >JavaScript</h3>
-                <span class="tooltiptext">what is JS?</span>
-                <div class="guodu1" style="color: wheat; line-height:30px; border:none;">
-				JS---Web的编程语言
-                <br />一种基于对象和事件驱动<br />有相对安全性的客户端脚本语言<br />并能够实现交互、逻辑层<br />
-                那么如何编写JS呢？
-                <br /><br />
-                </div>
-                
-                </div>
-                <div>
-				<hr  />
-				<a href="http://www.runoob.com/js/js-tutorial.html" target="_blank"><button value="阅读全文" style="background-color:orange; float: right; border: none;height:30px; width:60px; border-radius:100px;"><marquee direction="right" behavior="alternate" scrollamount="1">阅读全文</marquee></button></a>
-			</div>
+    </div>
+    <!--链接 github  账户-->
+    <div style="">
+    <center><a href="#" style="text-decoration:none; background-size:contain"><h1 align="center" style="color:#0FF; width:400px;">BlackGHu's &emsp;blog<br /><img src="img/b-logo.jpg" width="90" height="90" class="img"></h1></a></center>
+    </div>
+    <div style="">
+    	<center></center>
+	</div>
+ 
+    </div>
+	<!--折叠-->
+    
+    <!--第一个-->
+    <div style="background-color:">
+        <div  class="content_a"  >
+            <h1 onclick="openShutManager(this,'box1',false,'DOM','❥(^_-)')" style="border-left:5px solid #FF0000; padding-top:10px; padding-bottom:10px; cursor:pointer; text-shadow:5px 5px 5px  rgba(255,0,0,0.3)" id="one"><marquee direction="right" behavior="alternate" scrollamount="2">∮什么是&emsp;HTML--DOM</marquee></h1>
+            <span><big style="color:rgba(255,0,0,1)">DOM--文档对象模型&emsp;</big>是所有前段开发每天打交道的东西，但是随着jQuery等库的出现，大大简化了DOM操作，导致大家慢慢的“遗忘”了它的本来面貌。不过，要想深入学习前端知识，对DOM的了解是不可或缺的。DOM 定义了所有 HTML 元素的对象和属性，以及访问它们的方法（接口）。</span>
+            <button id="btn1" class="button" value="阅读全文" style="float:right; vertical-align:middle"><span>阅读全文</span></button><p id="p1" style="display:none;">举个例子：我们有一段HTML，那么如何访问第二层第一个节点呢，如何把最后一个节点移动到第一个节点上面去呢？DOM就是定义了如果做类似操作，那么应该怎么做的标准。比如用getElementById来访问节点，用insertBefore来插入节点。当浏览器载入HTML时，会生成相应的<big style="color:red">DOM树</big>。
+<br />&emsp;&emsp;简而言之，DOM可以理解为一个访问或操作HTML各种标签的实现标准。对于一个HTML来说，文档节点Document（看不到的）是它的根节点，对应的对象便是docum。换句话说存在一个文档节点Document，然后它有子节点，比如通过document.getElementsByTagName("html")，得到类型为元素节点的Element html。当然还有很多访问节点的方式，如下图：<img src="img/tu1.gif" width="800" height="200"><a href="newblog-fu1.html" target="_blank"><button class="button" value="实例" style="float:right; vertical-align:middle;" ><span>实例</span></button></a></p>
+
+            <p id="box1" style="display:none">
+                <img src="img/newblog-2.png"  width="800" height="200" style="float:left;">
+            	
+            </p>
+        </div>
+    
+    <!--第二个-->
+        <div  class="content_a" style="padding-top:200px;">
+            <h1 onclick="openShutManager(this,'box2',false,'DOM  事件','❥(^_-)')" style="border-left:5px solid #FF0000; padding-top:10px; padding-bottom:10px;cursor:pointer;  text-shadow:5px 5px 5px  rgba(255,0,0,0.3)" id="two"><marquee direction="right" behavior="alternate" scrollamount="2">HTML&emsp;DOM--事件</marquee></h1>
+            <span><big style="color:rgba(255,0,0,1)">HTML&emsp;DOM允许JavaScript对HTML事件作出反应。</big>当事件发生时，可以执行 JavaScript，比如当用户点击一个 HTML 元素时。<br />主要分为:&emsp;<big>①Window事件&emsp;②Form事件&emsp;③Keyboard事件&emsp;④Mouse事件&emsp;⑤Media事件&emsp;等等...</big></span>
+            <button id="btn2" class="button" value="阅读全文" style="float:right; vertical-align:middle"><span>阅读全文</span></button><p id="p2" style="display:none;">具体事件的属性有：▲Onblur--元素失去焦点时运行→→→Onfocus--元素获得焦点时运行&emsp;&emsp;&emsp;▲Onclick--鼠标点击时触发→→→Ondblclick--鼠标双击时触发&emsp;&emsp;&emsp;▲Onmousedown--按下鼠标按钮时触发→→→Onmousemove/Onmouseover--鼠标移动到元素上时触发→→→Onmouseseup--当元素上释放鼠标按钮时触发<img src="img/tu2.jpg" width="800" height="200"><a href="newblog-fu2.html" target="_blank"><button class="button" value="实例" style="float:right; vertical-align:middle;" ><span>实例</span></button></a></p>
+            <p id="box2" style="display:none">
+            	
+                <img src="img/newbolg-3.jpg" width="800" height="200" style="float:left; border-radius:50px">
+            </p>
+        </div>
+        
+        
+    
+    <!--第三个-->
+            <div  class="content_a" style="padding-top:200px;">
+                <h1 onclick="openShutManager(this,'box3',false,'❥(^_-)','Document  &  Element')" style="border-left:5px solid #FF0000; padding-top:10px; padding-bottom:10px; cursor:pointer;  text-shadow:5px 5px 5px  rgba(255,0,0,0.3)" id="three"><marquee direction="right" behavior="alternate" scrollamount="2">DOM--对象</marquee></h1>
+                <span><big style="color:rgba(255,0,0,1)">DOM对象&emsp;</big>有很多种，上面的两个介绍中就略微带了点DOM对象的一些属性以及用法。</span>
+                <button id="btn3"  class="button" value="阅读全文" style="float:right; vertical-align:middle"><span>阅读全文</span></button><p id="p3" style="display:none;"><big style="color:rgba(255,0,0,1)">DOM对象</big>总的可分为4大类：①DOM--Document&emsp;&emsp;②DOM--Element&emsp;&emsp;③DOM--Attribute&emsp;&emsp;④DOM--Event&emsp;&emsp;接下来介绍各自用的较多的一些<br /><big style="color:rgba(255,0,0,1)">Doucment:</big><br />
+①--Document对象集合：&emsp;all[]--提供对文档中所有 HTML 元素的访问。&emsp;anchors[]--返回对文档中所有 Anchor 对象的引用。&emsp;applets	返回对文档中所有 Applet 对象的引用。&emsp;forms[]--返回对文档中所有 Form 对象引用。&emsp;images[]--返回对文档中所有 Image 对象引用。&emsp;links[]--返回对文档中所有 Area 和 Link 对象引用。<br />
+②--Document对象属性：&emsp;title--返回当前文档的标题。&emsp;	URL--返回当前文档的 URL。<br />
+③--Document对象方法：&emsp;getElementById()--返回对拥有指定 id 的第一个对象的引用。&emsp;getElementsByName()--返回带有指定名称的对象集合。&emsp;getElementsByTagName()--返回带有指定标签名的对象集合。<br />
+<big style="color:rgba(255,0,0,1)">Element:</big><br />①--element.childNodes--返回元素子节点的 NodeList。&emsp;②--element.cloneNode()--克隆元素。&emsp;③--element.firstChild	返回元素的首个子。&emsp;④--element.getAttribute()--返回元素节点的指定属性值。&emsp;⑤--element.getAttributeNode()--返回指定的属性节点。&emsp;⑥--element.getElementsByTagName()--返回拥有指定标签名的所有子元素的集合。
+<img src="img/tu5.jpg" width="800" height="200"><a href="newblog-fu3.html" target="_blank"><button class="button" value="实例" style="float:right; vertical-align:middle;" ><span>实例</span></button></a></p>
+                <p id="box3" style="display:none">
+                    <img src="img/tu4.png" width="800" height="200" style="float:left; border-radius:50px">
+                </p>
             </div>
             
-			<div id="" style="padding-top: 170px; padding-left:20px; width: 500px;">
-				<img src="img/img-7.jpg" align="left"  width="250"; height="185" />
-				 <div class="tooltip" style="text-align:center">
-				<h3 style="color: orangered;" >CSS</h3>
-                <span class="tooltiptext">What Is  CSS?</span>
-                
-                <div class="guodu" style="color: wheat; line-height:30px">
-				CSS---层叠样式表
-                <br /><span>可以有效地控制页面的布局、颜色和其它效果</span><br /><br /><br /><br />
-                </div>
-                </div>
-				<hr  />
-                <a href="#" class="btn"><button value="阅读全文"  onClick="clicket()" style="background-color:orange; float: right; border: none; height:30px; width:60px; border-radius:60px;"><marquee direction="right" behavior="alternate" scrollamount="1">阅读全文</marquee></button></a>
-			</div>
-		</div>
-        <br /><br /><br /><br />
-        <hr />
-        <p style="color:wheat; text-align:center;" ><marquee direction="right" behavior="alternate" scrollamount="3">Maded   By   XSC</marquee></p>
-         <p style=" text-align:center; font-size:14px; color:wheat" id="date"></p>
-        <br /><br />
-       
-	</body>
-
+            
+            
+        <!--第四个-->
+            <div  class="content_a" style="padding-top:200px;">
+                <h1 onclick="openShutManager(this,'box4',false,'什么是jQuery','什么是jQuery')" style="border-left:5px solid #FF0000; padding-top:10px; padding-bottom:10px;cursor:pointer;  text-shadow:5px 5px 5px  rgba(255,0,0,0.3)" id="four"><marquee direction="right" behavior="alternate" scrollamount="2">什么是jQuery4</marquee></h1>
+                <span><big style="color:rgba(255,0,0,1)">DOM--文档对象模型&emsp;</big>asdwq</span>
+                <button id="btn4" class="button" value="阅读全文" style="float:right; vertical-align:middle"><span>阅读全文</span></button><p id="p4" style="display:none;">asdqwdqqwdqw<img src="img/newblog-2.png" width="800" height="200"><a href="newblog-fu1.html" target="_blank"><button class="button" value="实例" style="float:right; vertical-align:middle;" ><span>实例</span></button></a></p>
+                <p id="box4" style="display:none">
+                    <img src="img/b-9.jpg" width="800" height="200" style="float:left; border-radius:50px">
+                </p>
+            </div>
+ 		 <!--第五个-->
+            <div  class="content_a" style="padding-top:200px;">
+                <h1 onclick="openShutManager(this,'box5',false,'什么是jQuery','什么是jQuery')" style="border-left:5px solid #FF0000; padding-top:10px; padding-bottom:10px; cursor:pointer;  text-shadow:5px 5px 5px  rgba(255,0,0,0.3)" id="five"><marquee direction="right" behavior="alternate" scrollamount="2">什么是jQuery3</marquee></h1>
+                <span><big style="color:rgba(255,0,0,1)">DOM--文档对象模型&emsp;</big>asdwq</span>
+                <button id="btn5"  class="button" value="阅读全文" style="float:right; vertical-align:middle"><span>阅读全文</span></button><p id="p5" style="display:none;">asdqwdqqwdqwasdqwdqqwdqwtml。<img src="img/newblog-2.png" width="800" height="200"><a href="newblog-fu3.html" target="_blank"><button class="button" value="实例" style="float:right; vertical-align:middle;" ><span>实例</span></button></a></p>
+                <p id="box5" style="display:none">
+                    <img src="img/b-8.jpg" width="800" height="200" style="float:left; border-radius:50px">
+                </p>
+            </div>
+      
+    
+    </div>
+<br /><br /><br /><br />
+	<hr style="margin-top:100px;"/>
+<br /><br />
+	<a href="http://www.github.com" target="_blank"><img src="img/newblog-github.jpg" width="90" height="60" style="float:right"></a>
+	<center>✈✈✈<small>参考手册：<a href="https://developer.mozilla.org/zh-CN/" target="_blank" style="text-decoration:none;">https://developer.mozilla.org/zh-CN/</a><br /><a href="http://www.w3school.com.cn/index.html"  target="_blank" style="text-decoration:none; display:inline-block">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;http://www.w3school.com.cn/index.html</a></small></center>
+    
+	 <p style=" text-align:center; font-size:20px; color:rgba(255,153,153,1)" id="date"></p>
+</body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML DOM事件</title>
+</head>
+
+<body style="margin:20px; padding:30px" onload="show()">
+
+<code>
+
+<textarea style=" width:500px; height:500px; overflow:scroll; float:left;padding:20px;">
+<body>
+<img src="img/nolight.gif" id="img" onmouseover="change1()" onmouseout="change2()">
+<button value="现在时间" onclick="date()">现在时间</button>
+<p id="date"></p>
+输入一串字符串：<input type="text"  id="fname" onblur="fname()" width="100"/>
+<p>离开输入框后，函数将被触发，将小写字母转为大写字母。</p>
+<script>
+
+	function change1(){
+		document.getElementById("img").src="img/light.gif";	
+	}
+	function change2(){
+		document.getElementById("img").src="img/nolight.gif";
+	}
+	function date(){
+		document.getElementById("date").innerHTML=Date();
+	}
+	function fname(){
+		x=document.getElementById("fname");
+		x.value=x.value.toUpperCase();
+	}
+</script>
+</body>
+
+</textarea>
+</code>
+
+
+
+<code>
+<div style=" width:500px; height:500px; overflow:scroll;padding:20px; border:1px solid rgba(0,0,0,1)">
+<img src="img/nolight.gif" id="img" onmouseover="change1()" onmouseout="change2()"><br /><br />
+<button value="现在时间" onclick="date()">现在时间</button>
+<p id="date"></p>
+输入一串字符串：<input type="text"  id="fname" onblur="fname()" width="100"/>
+<p>离开输入框后，函数将被触发，将小写字母转为大写字母。</p>
+<script>
+function change1(){
+	document.getElementById("img").src="img/light.gif";	
+}
+function change2(){
+	document.getElementById("img").src="img/nolight.gif";
+}
+function date(){
+	document.getElementById("date").innerHTML=Date();
+}
+function show(){
+	alert("学海无涯苦作舟");
+}
+function fname(){
+		x=document.getElementById("fname");
+		x.value=x.value.toUpperCase();
+	
+	}
+
+</script>
+</div>
+</code>
+</body>
+</html>

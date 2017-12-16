@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/blog-2.css"/>
+        <link rel="stylesheet" type="text/css" href="css/提示文本-2.css">
+        <link rel="stylesheet" type="text/css" href="css/link-NBA.css">
+        <script language="javascript" src="js/blog-2.js"></script>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.top_background-left {
+				width: auto;
+				height: 150px;
+				border-radius: 0 0 200px 200px;
+				background: url(img/img-4.jpg) round;
+			}
+			
+			.top_background-center {
+				border-radius: 300px;
+				background: #FC0;
+			}
+			.imgbox {
+                width: 480px;
+                height: 320px;
+                position: relative;
+
+            }
+            
+            .imgs {
+                opacity: 0;
+                position: absolute;
+                max-height: 320px;
+                max-width: 480px;
+            }
+		</style>
+	</head>
+
+	<body background="img/img-2.jpg"	>
+		<!--top导航栏-->
+		<div class="top_background-left">
+			<div>
+				<a href="https://developer.mozilla.org/zh-CN/" target="_blank"><img src="img/mdn.png" width="50" height="46" class="top_background-center" style="float: left;" /></a>
+					
+					<ul style="float: right;" class="breadcrumb">
+                    <img src="img/img-9.jpg" width="70" height="46" class="top_background-center" style="float: left;" />
+						<li><a class="active" href="#home">主页</a></li>
+						
+						<div class="dropdown">
+							<a href="#" class="dropbtn">菜单</a>
+							<div class="dropdown-content" style="text-align: left;	background:orange;">
+								<a href="#">链接 1</a>
+								<a href="#">链接 2</a>
+								<a href="#">链接 3</a>
+                               
+							</div>
+                      
+						</div>
+                         
+			  </ul>
+                     
+					<ul class="breadcrumb">
+						
+						<li><a class="active" href="#home">主页</a></li>
+						
+						<div class="dropdown">
+							<a href="#" class="dropbtn">作品</a>
+							<div class="dropdown-content" style="background: orange;">
+								<a href="http://xiaorong61.github.io" target="_blank"><marquee direction="right" behavior="alternate" scrollamount="1">在线聊天</marquee></a>
+								<a href="#"><marquee direction="right" behavior="alternate" scrollamount="1">博客</marquee></a>
+								
+							</div>
+						</div>
+					</ul>
+					
+		  </div>
+		</div>
+		<!--导航栏结束-->
+		<!--各种互联网+例子的链接-->
+		<div style="padding:50px;">
+			<link rel="stylesheet" type="text/css" href="css/link-NBA.css"/>
+			<ul style="list-style: none;" class="border">
+				<li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/HTML5" target="_blank"><img src="img/html5.png" />⊙HTML5</a></li>
+				<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS3" target="_blank"><img src="img/css3.png" />▲CSS3</a></li>
+                <li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/JavaScript" target="_blank"><img src="img/js.png" />⊙JS</a></li>
+                <li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/jQuery" target="_blank"><img src="img/jQuery.png" />▲jQuery</a></li>
+                <li><a href="https://nodejs.org/en/docs/" target="_blank"><img src="img/nodejs.png" />⊙Nodejs</a></li>
+                <li><a href="https://reactjs.org/" target="_blank"><img src="img/react.png"  height="32"/>▲React</a></li>
+                <li><a href="https://www.highcharts.com/" target="_blank"><img src="img/highcharts.png" />⊙Highcharts</a></li>
+                
+			</ul>
+		</div>
+		<!--a链接结束-->
+		<div id="">
+       		<!--   控制页面右侧   -->
+            <div style="float:right; padding-right:40px; padding-left:50px; margin:20px" >
+        		<div class="imgbox" id="imgbox" onClick="change()">
+        			<img src="img/img-13.jpg"  width="480px;" height="320px;" class="imgs" style="opacity: 1;" alt="" />
+                    <img src="img/img-14.jpg"  width="480px;" height="320px;" class="imgs" alt=""/>
+                    <img src="img/img-17.jpg"  width="480px;" height="320px;" class="imgs" alt=""/>
+                    <img src="img/img-15.jpg"  width="480px;" height="320px;" class="imgs" alt=""/>
+                    <img src="img/1.jpg"  width="480px;" height="320px;" class="imgs" alt=""/>
+        		</div>
+               
+                <div style="padding-top:60px; width:500px; ">
+                	<img src="img/img-7.jpg"  align="left" width="250px" height="185">
+                    <div class="tooltip" style="text-align:center">
+				<h3 style="color: orangered;" >HTML--DOM</h3>
+                <span class="tooltiptext">What Is  DOM?</span>
+               <div class="guodu" style="color: wheat; line-height:30px">
+				HTML-超文本标记语言
+                <br />可在其中建立自己的WEB站点<br />HTML运行在浏览器上<br />并且由浏览器解析<br />
+                如何用HTML来创建站点呢？
+                <br /><br />
+                </div>
+                </div>
+                    
+					<hr  />
+                	<a href="http://www.runoob.com/html/html-tutorial.html" target="_blank"><button value="阅读全文" style="background-color:orange; float: right; border: none;height:30px; width:60px; border-radius:60px;"><marquee direction="right" behavior="alternate" scrollamount="1">阅读全文</marquee></button></a>
+                </div>
+                <div style="padding-top:170px; width:500px;">
+                <img src="img/img-7.jpg" width="250px" align="left" height="185" >
+                <div class="tooltip" style=" text-align:center">
+				<h3 style="color: orangered;" >HTML</h3>
+                <span class="tooltiptext">What IS HTML?</span>
+                <div class="guodu" style="color: wheat; line-height:30px">
+				HTML-超文本标记语言
+                <br />可在其中建立自己的WEB站点<br />HTML运行在浏览器上<br />并且由浏览器解析<br />
+                如何用HTML来创建站点呢？
+                <br /><br />
+                </div>
+                </div>
+                    
+					<hr  />
+                	<a href="#"><button value="阅读全文" style="background-color:orange; float: right; border: none;height:30px; width:60px; border-radius:60px;"><marquee direction="right" behavior="alternate" scrollamount="1">阅读全文</marquee></button></a>
+                </div>
+        	</div>
+            <!-- 右侧结束  -->
+            <!-- 开启左侧  -->
+			<div id="" style="padding:20px 50px;">
+				<img src="img/img-6.jpg" width="480px" />
+			</div>
+			<div id="" style="padding-top: 40px; padding-left:20px;‘ width: 500px;">
+				<img src="img/light.gif" id="light" style="float:left" onmouseover="nolight()" onmouseout="light()" />
+                <div class="tooltip" style=" text-align:center">
+				<h3 style="color: orangered;" >JavaScript</h3>
+                <span class="tooltiptext">what is JS?</span>
+                <div class="guodu1" style="color: wheat; line-height:30px; border:none;">
+				JS---Web的编程语言
+                <br />一种基于对象和事件驱动<br />有相对安全性的客户端脚本语言<br />并能够实现交互、逻辑层<br />
+                那么如何编写JS呢？
+                <br /><br />
+                </div>
+                
+                </div>
+                <div>
+				<hr  />
+				<a href="http://www.runoob.com/js/js-tutorial.html" target="_blank"><button value="阅读全文" style="background-color:orange; float: right; border: none;height:30px; width:60px; border-radius:100px;"><marquee direction="right" behavior="alternate" scrollamount="1">阅读全文</marquee></button></a>
+			</div>
+            </div>
+            
+			<div id="" style="padding-top: 170px; padding-left:20px; width: 500px;">
+				<img src="img/img-7.jpg" align="left"  width="250"; height="185" />
+				 <div class="tooltip" style="text-align:center">
+				<h3 style="color: orangered;" >CSS</h3>
+                <span class="tooltiptext">What Is  CSS?</span>
+                
+                <div class="guodu" style="color: wheat; line-height:30px">
+				CSS---层叠样式表
+                <br /><span>可以有效地控制页面的布局、颜色和其它效果</span><br /><br /><br /><br />
+                </div>
+                </div>
+				<hr  />
+                <a href="#" class="btn"><button value="阅读全文"  onClick="clicket()" style="background-color:orange; float: right; border: none; height:30px; width:60px; border-radius:60px;"><marquee direction="right" behavior="alternate" scrollamount="1">阅读全文</marquee></button></a>
+			</div>
+		</div>
+        <br /><br /><br /><br />
+        <hr />
+        <p style="color:wheat; text-align:center;" ><marquee direction="right" behavior="alternate" scrollamount="3">Maded   By   XSC</marquee></p>
+         <p style=" text-align:center; font-size:14px; color:wheat" id="date"></p>
+        <br /><br />
+       
+	</body>
+
+</html>
