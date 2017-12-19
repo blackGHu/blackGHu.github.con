@@ -13,6 +13,19 @@
 <body>
 
 
+	
+    输入：<input type="text" id="in"  onfocus="focu()" onblur="blue()">
+    
+    <p>
+    	复制输入：<input type="text"  id="fuzhi"/>
+   			    <button type="button" value="复制" onclick="fuzhi()">复制</button>
+	</p>
+    重置输入：<button value="重置" onclick="cz()">重置</button><br /><br />
+
+    计时</button><input type="text" id="time"/><button value="停止" onclick="hold()">停止</button>
+
+
+
 
 </body>
 </textarea>
@@ -22,7 +35,50 @@
 
 <code>
 <div style=" width:500px; height:500px; overflow:scroll;padding:20px; border:1px solid rgba(0,0,0,1)">
+	
+	
+    输入：<input type="text" id="in"  onfocus="focu()" onblur="blue()">
+    
+    <p>
+    	复制输入：<input type="text"  id="fuzhi"/>
+   			    <button type="button" value="复制" onclick="fuzhi()">复制</button>
+	</p>
+    重置输入：<button value="重置" onclick="cz()">重置</button><br /><br />
+
+    计时</button><input type="text" id="time"/><button value="停止" onclick="hold()">停止</button>
 </div>
 </code>
+<script>
+	
+	function focu(){
+		document.getElementById("in").style.backgroundColor="red";
+	}
+	function blue(){
+		document.getElementById("in").style.backgroundColor="skyblue";
+	}
+	function cz(){
+		alert("输入框的内容将会被重置");
+		addEventListener("click",function(){
+		document.getElementById("in").value="";
+		
+		});
+	}
+	function fuzhi(){
+		addEventListener("click",function(){
+		document.getElementById("fuzhi").value=document.getElementById("in").value;	
+		});	
+	}
+	
+	
+	var t=1;
+	var time = setTimeout(function(){
+		document.getElementById("time").value=t;
+		t++;
+		time = setTimeout(arguments.callee,1000);
+	},1000)
+	function hold(){
+		clearTimeout(time);	
+	}
+</script>
 </body>
 </html>

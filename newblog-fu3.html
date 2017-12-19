@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>newblog-fu3</title>
 </head>
 
 <body>
@@ -12,7 +12,12 @@
 
 <textarea style=" width:500px; height:500px; overflow:scroll; float:left;padding:20px;">
 <body>
-
+<p onclick="getValue()">click    me  </p>
+    
+    <input name="myInput" type="text" size="30" /><br />
+	<input name="myInput" type="text" size="30" /><br />
+    <br />
+	<button onclick="get()" value="How many elements named 'myInput'?" >名叫myInput的元素个数</button><br />
 
 
 </body>
@@ -23,6 +28,32 @@
 
 <code>
 <div style=" width:500px; height:500px; overflow:scroll;padding:20px; border:1px solid rgba(0,0,0,1)">
+	<p onclick="getValue()">click    me  </p>
+    
+    <input name="myInput" type="text" size="30" /><br />
+	<input name="myInput" type="text" size="30" /><br />
+    <br />
+	<button onclick="get()" value="How many elements named 'myInput'?" >名叫myInput的元素个数</button><br /><br />
+
+
+
+<script>
+	document.write(document.title);
+	
+	
+	function getValue(){
+		alert(document.querySelector("p").innerHTML);
+	}
+	
+	function get(){
+	  var x=document.getElementsByName("myInput");
+	  alert(x.length);
+  	}
+	
+</script>
+
+
+
 </div>
 </code>
 </body>
